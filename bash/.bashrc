@@ -160,7 +160,6 @@ if ! pgrep -x "ssh-agent" > /dev/null; then
   eval "$(ssh-agent -s)"
   eval "$(ssh-add)"
 fi
-
 alias am="artix-metro"
 export PATH="$HOME/.local/bin:$HOME/.local/sbin:$HOME/.local/share:$PATH"
 export SKIPGPGPASSPROMPT=true
