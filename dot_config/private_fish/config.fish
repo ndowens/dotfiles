@@ -135,3 +135,7 @@ alias jctl="journalctl -p 3 -xb"
 
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+set EDITOR vim
+alias am="artix-metro"
+export SKIPGPGPASSPROMPT=true
+export SSHKEYSIGN="$HOME/.ssh/id_rsa"
