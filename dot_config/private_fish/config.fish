@@ -130,3 +130,4 @@ alias am="artix-metro"
 export SKIPGPGPASSPROMPT=true
 export SSHKEYSIGN="$HOME/.ssh/id_rsa"
 export PATH="$PATH:~/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
+alias uupd="sudo uupd"
