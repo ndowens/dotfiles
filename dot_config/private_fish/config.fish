@@ -129,5 +129,5 @@ set EDITOR vim
 alias am="artix-metro"
 export SKIPGPGPASSPROMPT=true
 export SSHKEYSIGN="$HOME/.ssh/id_rsa"
-export PATH="$PATH:~/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin"
+export PATH="$PATH:~/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/ndowens/.local/share/soar/bin"
 alias uupd="sudo uupd"
