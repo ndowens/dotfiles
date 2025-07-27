@@ -136,4 +136,6 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
     eval $(ssh-agent -s)
 end
 
-ssh-add -l > /dev/null 2>&1 || ssh-add ~/.ssh/private_key`
+#ssh-add -l > /dev/null 2>&1 || ssh-add ~/.ssh/private_key
+cat ~/.ssh/private_key | ssh-add  2&>1 /dev/null
+
