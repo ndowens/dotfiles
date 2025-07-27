@@ -131,3 +131,9 @@ export SKIPGPGPASSPROMPT=true
 export SSHKEYSIGN="$HOME/.ssh/id_rsa"
 export PATH="$PATH:~/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/ndowens/.local/share/soar/bin"
 alias uupd="sudo uupd"
+
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval $(ssh-agent -s)
+end
+
+ssh-add -l > /dev/null 2>&1 || ssh-add ~/.ssh/private_key`
