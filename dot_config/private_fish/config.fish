@@ -136,6 +136,9 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
     eval $(ssh-agent -s)
 end
 
-#ssh-add -l > /dev/null 2>&1 || ssh-add ~/.ssh/private_key
-cat ~/.ssh/private_key | ssh-add -l > /dev/null 2>&1 
+function add_ssh_key
+    set passphrase (cat ~/.ssh/private_key)
+    echo $passphrase | ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
+end
 
+add_ssh_key
