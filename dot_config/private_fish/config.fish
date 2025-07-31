@@ -136,9 +136,18 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
     eval $(ssh-agent -s)
 end
 
+#function add_ssh_key
+	#set passphrase (cat ~/.ssh/private_key)
+    #echo $passphrase | ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
+    #end
+
 function add_ssh_key
-    set passphrase (cat ~/.ssh/private_key)
-    echo $passphrase | ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
+	 set passphrase_file "/home/ndowens/.ssh/private_key"
+	if test -f $passphrase_file
+	cat $passphrase_file | ssh-add 
+    	else
+	    echo "Passphrase file not found."
+    	end
 end
 
 add_ssh_key
