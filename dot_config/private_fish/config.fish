@@ -141,13 +141,11 @@ end
     #echo $passphrase | ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
     #end
 
+if status is-interactive
 function add_ssh_key
-	 set passphrase_file "/home/ndowens/.ssh/private_key"
-	if test -f $passphrase_file
-	cat $passphrase_file | ssh-add 
-    	else
-	    echo "Passphrase file not found."
-    	end
+ 	set passphrase_file "/home/ndowens/.ssh/private_key"
+	ssh-add < $passphrase_file > /dev/null 2&>1
+	end
 end
 
 add_ssh_key
